@@ -18,7 +18,7 @@ WHERE NOT (state = 'California');
 --    years. Use BETWEEN.
 SELECT full_name,state
 FROM teams
-WHERE NOT (year_founded BETWEEN 1960 AND 1980)
+WHERE NOT (year_founded BETWEEN 1960 AND 1980);
 
 -- 3. Show teams in Texas, Florida, or New York, with their states.
 --    Use IN.
@@ -32,9 +32,9 @@ FROM teams
 WHERE nickname LIKE 'C%';
 
 -- 5. Find every player whose name contains "James".
-SELECT full_name, state
-FROM teams
-WHERE full_name LIKE '%James%'
+SELECT full_name
+FROM players
+WHERE full_name LIKE '%James%';
 
 -- 6. List each state that has at least one team — each state only
 --    once, sorted alphabetically.
@@ -53,23 +53,24 @@ WHERE NOT (state = 'california');
 
 -- Query 5 returns more than just LeBron. Who else shows up, and why?
 
--- this is my answer... 
+-- Becuase I am querying for any name that is like "JAMES" and there is more than one player with that name. 
 
 -- Query 6 returns fewer rows than there are teams. Why?
 
+-- DISTINCT removes duplicates.
 
 -- Query 7 could also be written with <> instead of NOT. Why do they
 -- give the same result?
-
+--Both check for inequality. NOT state = 'CA' takes the TRUE/FALSE result of state = 'CA' and flips it while state <> 'CA' tests directly that the state is "not equal to" California.
 
 -- =====================================================================
 -- VOCABULARY — your words, not the reference sheet's
 -- =====================================================================
 
--- Boolean logic:
+-- Boolean logic: The system withch is say "TRUE or "FALSE"
 
 
--- Wildcard:
+-- Wildcard: looks for a nickname
 
 
--- NULL:
+-- C: It is no empty string 
