@@ -53,7 +53,7 @@ WHERE NOT (state = 'california');
 
 -- Query 5 returns more than just LeBron. Who else shows up, and why?
 
-
+-- this is my answer... 
 
 -- Query 6 returns fewer rows than there are teams. Why?
 
