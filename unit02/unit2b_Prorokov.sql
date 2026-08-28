@@ -73,4 +73,4 @@ WHERE NOT (state = 'california');
 -- Wildcard: looks for a nickname
 
 
--- C: It is no empty string 
+-- : It is no empty string 
