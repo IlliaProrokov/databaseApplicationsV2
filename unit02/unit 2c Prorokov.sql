@@ -68,6 +68,6 @@ FROM team_game_stats
 -- =====================================================================
 
 -- Calculated column:A temporary column created during a query using math operations or SQL functions that doesn't actually exist in the database table.
-
+-- test 
 
 -- Concatenation (||):   An operator used to combine two or more text values or column strings together end-to-end into a single text output.       
