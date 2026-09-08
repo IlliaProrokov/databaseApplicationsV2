@@ -16,13 +16,17 @@ FROM    teams
 GROUP BY state;
 
 -- 2. Same as query 1, but sorted with the most teams first.
-SELECT   state, city, COUNT(*) AS team_count
-FROM  teams
-GROUP BY state, city;
+SELECT   state, COUNT(*) AS team_count
+FROM    teams
+GROUP BY state
+ORDER BY team_count DESC;
+
+
 
 -- 3. Same as query 2, but only show states with more than one team.
 SELECT   state, city, COUNT(*) AS team_count
 FROM teams
+GROUP BY state
 HAVING   COUNT(*) > 1;
 
 -- 4. For each season, show the average points scored per game,
