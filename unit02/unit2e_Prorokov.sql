@@ -35,14 +35,20 @@ SELECT season, ROUND (AVG(pts), 1)
 FROM team_game_stats 
 GROUP BY season;
 
--- 5. AS 1 > avg_pts
-SELECT season, ROUND (AVG(pts), 5) 
-FROM team_game_stats 
-GROUP BY season;
+-- 5 For each team, count how many games they won. (Wins are
+--    wl = 'W'.) Show team_id and the win count.
+SELECT team_id, COUNT(*) AS win_count
+FROM team_game_stats
+WHERE wl = 'W'
+GROUP BY team_id;
+
 -- 6. Same as query 5, but only teams with more than 200 wins.
-SELECT season, ROUND (AVG(pts), 1) 
-FROM team_game_stats 
-HAVING   COUNT(*) > 200;
+SELECT team_id, COUNT(*) AS win_count
+FROM team_game_stats
+WHERE wl = 'W'
+GROUP BY team_id
+HAVING win_count > 200
+ORDER BY win_count DESC 
 
 -- =====================================================================
 -- CHECK YOUR WORK
