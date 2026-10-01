@@ -68,7 +68,7 @@ PostgreSQL (or MySQL / SQLite).
 **7.** In 3a, the `teams` + `games` tables stored each team once and linked games to teams with `team_id`. Why is a relational database a good fit for NBA data?
 
 **Answer:**
-NBA data has fixed, structured entities (teams, games, players) with clear relationships. A relational database prevents duplicate entries, enforces consistency through primary/foreign keys, and allows seamless queries across interconnected tables using SQL joins.
+NBA data has fixed, structured entities teams, games, players with clear relationships. A relational database prevents duplicate entries, enforces consistency through primary/foreign keys, and allows seamless queries across interconnected tables using SQL joins.
 
 **8.** You're building an app for our school that keeps track of students, classes, and grades. Which type of database would you pick, and why?
 
